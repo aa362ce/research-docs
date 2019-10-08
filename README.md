@@ -12,6 +12,7 @@ Default contents of /etc/passwd file this contains all user informations this is
 
 ```bash
 # cat /etc/passwd
+
 root:x:0:0:root:/root:/bin/bash
 daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
 bin:x:2:2:bin:/bin:/usr/sbin/nologin
@@ -33,6 +34,7 @@ $ useradd newUserNameHere
 Listing all groups on a linux system
 ```bash
 # cat /etc/group
+
 root:x:0:
 daemon:x:1:
 bin:x:2:
@@ -47,10 +49,10 @@ uucp:x:10:
 man:x:12:
 proxy:x:13:
 ```
-* *group_name*: It is the name of group. If you run ls -l command, you will see this name printed in the group field.
-* *Password*: Generally password is not used, hence it is empty/blank. It can store encrypted password. This is useful to implement privileged groups.
-* *Group ID (GID)*: Each user must be assigned a group ID. You can see this number in your /etc/passwd file.
-* *Group List*: It is a list of user names of users who are members of the group. The user names, must be separated by commas.
+* __group_name__: It is the name of group. If you run ls -l command, you will see this name printed in the group field.
+* __Password__: Generally password is not used, hence it is empty/blank. It can store encrypted password. This is useful to implement privileged groups.
+* __Group ID (GID)__: Each user must be assigned a group ID. You can see this number in your /etc/passwd file.
+* __Group List__: It is a list of user names of users who are members of the group. The user names, must be separated by commas.
 
 Adding a new group 
 ```bash
@@ -60,4 +62,40 @@ or to delete a group
 ```bash
 $ groupdel groupToBeDeleted
 ```
+
+Added user to a group 
+```bash
+$ sudo usermod -a -G groupname username 
+```
+## Some important commands 
+
+* __adduser__: add a user to the system.
+* __userdel__: delete a user account and related files.
+* __addgroup__: add a group to the system.
+* __delgroup__: remove a group from the system.
+* __usermod__: modify a user account.
+* __chage__: change user password expiry information.
+* __sudo__: run one or more commands as another user (typically with superuser permissions).
+
+> Relevant files: /etc/passwd (user information), /etc/shadow (encrypted passwords), /etc/group (group information) and /etc/sudoers (configuration for sudo).
+
+## Steps
+
++ Create a new user
+```bash
+$ adduser ashish
+```
++ Create a new group
+```bash
+$ addgroup maint
+```
++ Add new user to the group
+```bash
+$ sudo usermod -a -G maint ashish
+```
++ Delete the group ashish
+```bash
+groupdel ashish
+```
+
 
