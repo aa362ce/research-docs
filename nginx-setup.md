@@ -108,13 +108,11 @@ description: nginx settings for Let's encrypt
    ```
 
 6. Create a link to this file as nginx config file
-
    ```bash
    sudo ln -s /etc/nginx/sites-available/mysite.com /etc/nginx/sites-enabled/
    ```
 
 7. To avoid hash bucket memory problem enable the setting to accomodate more than one names
-
    ```bash
    sudo nano /etc/nginx/nginx.conf
    ```
@@ -122,13 +120,11 @@ description: nginx settings for Let's encrypt
    And ucomment the line `server_names_hash_bucket_size 64;`
 
 8. Check changes before restarting the server
-
    ```bash
    sudo nginx -t
    ```
 
 9. Restart nginx
-
    ```bash
    sudo systemctl restart nginx
    ```
