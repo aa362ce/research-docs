@@ -32,14 +32,17 @@ sudo ufw status
 
 > Output
 
-```bash
-Status: active
+> ```bash
+> Status: active
 
-To Action From
+> To Action From
 
-OpenSSH ALLOW Anywhere Nginx Full ALLOW Anywhere OpenSSH \(v6\) ALLOW Anywhere \(v6\) Nginx Full \(v6\) ALLOW Anywhere \(v6\)
-
-```
+> OpenSSH ALLOW Anywhere 
+> Nginx Full ALLOW Anywhere 
+> OpenSSH \(v6\) ALLOW Anywhere \(v6\) 
+> Nginx Full \(v6\) ALLOW Anywhere \(v6\)
+> 
+> ```
 
 ## Obtain ssl certificate
 ```bash

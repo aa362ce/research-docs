@@ -20,7 +20,7 @@ description: nginx settings for Let's encrypt
 
    > Output
    >
-   > ```text
+   > ```bash
    > Available applications:
    > Nginx Full
    > Nginx HTTP
