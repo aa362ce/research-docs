@@ -1,4 +1,4 @@
 # Table of contents
 
-* [Initial page](README.md)
+* [Hardening Ubuntu server for deployment](README.md)
 

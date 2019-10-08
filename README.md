@@ -1,7 +1,8 @@
-# Hardening ubuntu for delployment
+---
+description: Research docs and links glossary
+---
 
-> Asish Bhatt | Oct 8 2019
+# Hardening Ubuntu server for deployment
 
-------------------------------------
-
+> Ashish Bhatt \| Oct 8 2019
 
