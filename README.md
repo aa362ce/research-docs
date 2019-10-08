@@ -11,7 +11,7 @@ description: Research and links glossary
 Default contents of `/etc/passwd` file this contains all user informations this is colon separated first element is username second represents x which historically used to have password hash. Followed by user id, group id, description, home directory and at the end default shell.
 
 ```bash
-# cat /etc/passwd
+sudo cat /etc/passwd
 
 root:x:0:0:root:/root:/bin/bash
 daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
@@ -25,13 +25,13 @@ man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
 Add a new user
 
 ```bash
-$ adduser newUserNameHere
+sudo adduser newUserNameHere
 ```
 
 or
 
 ```bash
-$ useradd newUserNameHere
+sudo useradd newUserNameHere
 ```
 
 ## Groups
@@ -39,7 +39,7 @@ $ useradd newUserNameHere
 Listing all groups on a linux system
 
 ```bash
-# cat /etc/group
+sudo cat /etc/group
 
 root:x:0:
 daemon:x:1:
@@ -64,19 +64,19 @@ proxy:x:13:
 Adding a new group
 
 ```bash
-$ groupadd newGroupHere
+sudo groupadd newGroupHere
 ```
 
 or to delete a group
 
 ```bash
-$ groupdel groupToBeDeleted
+sudo groupdel groupToBeDeleted
 ```
 
 Added user to a group
 
 ```bash
-$ sudo usermod -a -G groupname username
+sudo usermod -a -G groupname username
 ```
 
 ## Some important commands
@@ -97,29 +97,30 @@ $ sudo usermod -a -G groupname username
 * Create a new user
 
   ```bash
-  $ adduser ashish
+  sudo adduser ashish
   ```
 
 * Create a new group
 
   ```bash
-  $ addgroup maint
+  sudo addgroup maint
   ```
 
 * Add new user to the group
 
   ```bash
-  $ sudo usermod -g maint ashish
+  sudo usermod -g maint ashish
   ```
 
 * Delete the group ashish
 
   ```bash
-  $ groupdel ashish
+  sudo groupdel ashish
   ```
 
-* Add user to sudoer list
+* Add user to `sudoer` list
 
   ```bash
-  # usermod -a -G sudo ashish
+  sudo usermod -a -G sudo ashish
   ```
+

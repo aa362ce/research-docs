@@ -4,19 +4,18 @@ description: nginx settings for Let's encrypt
 
 # nginx setup
 
-
 ## Installing NGINX on ubuntu
 
 1. Install nginx
 
    ```bash
-   $ sudo apt install nginx
+   sudo apt install nginx
    ```
 
 2. check firewall settings
 
    ```bash
-   $ sudo ufw app list
+   sudo ufw app list
    ```
 
    > Output
@@ -29,16 +28,16 @@ description: nginx settings for Let's encrypt
    > OpenSSH
    > ```
 
-3. Allow traffic 
+3. Allow traffic
 
    ```bash
-   $ sudo ufw allow 'Nginx HTTP'
+   sudo ufw allow 'Nginx HTTP'
    ```
 
 4. Check server status
 
    ```bash
-   $ systemctl status nginx
+   sudo systemctl status nginx
    ```
 
 5. Open browser and type the ip of the server to see something like below
@@ -50,19 +49,19 @@ description: nginx settings for Let's encrypt
 1. Make directory
 
    ```bash
-   $ sudo mkdir -p /var/www/mysite.com/html
+   sudo mkdir -p /var/www/mysite.com/html
    ```
 
 2. Change owenership to non root
 
    ```bash
-   $ sudo chown -R $USER:$USER /var/www/mysite.com/html
+   sudo chown -R $USER:$USER /var/www/mysite.com/html
    ```
 
 3. Set the permisions for the directory
 
    ```bash
-   $ sudo chmod -R 755 /var/www/mysite.com
+   sudo chmod -R 755 /var/www/mysite.com
    ```
 
 4. Create a test page
@@ -87,7 +86,7 @@ description: nginx settings for Let's encrypt
 5. Create server conf
 
    ```bash
-   $ sudo nano /etc/nginx/sites-available/mysite.com
+   sudo nano /etc/nginx/sites-available/mysite.com
    ```
 
    Add the following config
@@ -111,13 +110,13 @@ description: nginx settings for Let's encrypt
 6. Create a link to this file as nginx config file
 
    ```bash
-   $ sudo ln -s /etc/nginx/sites-available/mysite.com /etc/nginx/sites-enabled/
+   sudo ln -s /etc/nginx/sites-available/mysite.com /etc/nginx/sites-enabled/
    ```
 
 7. To avoid hash bucket memory problem enable the setting to accomodate more than one names
 
    ```bash
-   $ sudo nano /etc/nginx/nginx.conf
+   sudo nano /etc/nginx/nginx.conf
    ```
 
    And ucomment the line `server_names_hash_bucket_size 64;`
@@ -125,12 +124,12 @@ description: nginx settings for Let's encrypt
 8. Check changes before restarting the server
 
    ```bash
-   $ sudo nginx -t
+   sudo nginx -t
    ```
 
 9. Restart nginx
 
    ```bash
-   $ sudo systemctl restart nginx
+   sudo systemctl restart nginx
    ```
 
