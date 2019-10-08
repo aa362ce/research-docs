@@ -6,7 +6,7 @@ description: Guide for setting up ssl certs with
 
 ## Install certbot
 
-Add certbot repository
+1. Add certbot repository
 
 ```bash
 $ sudo add-apt-repository ppa:certbot/certbot
@@ -16,98 +16,35 @@ $ sudo add-apt-repository ppa:certbot/certbot
 certbot in default repository is usually not up-to date
 {% endhint %}
 
-Now you can install certbot package
+2. Now you can install certbot package
 
 ```bash
 $ sudo apt install python-certbot-nginx
 ```
 
-## Configure server block in nginx config file
+## Check firewall settings
+Make sure firewall has nginx and ssh settings enabled
+```bash
+sudo ufw status
+```
+> Output
+```bash
+Status: active
 
-1. Make directory
+To                         Action      From
+--                         ------      ----
+OpenSSH                    ALLOW       Anywhere
+Nginx Full                 ALLOW       Anywhere
+OpenSSH (v6)               ALLOW       Anywhere (v6)
+Nginx Full (v6)            ALLOW       Anywhere (v6)
+```
 
-   ```bash
-   $ sudo mkdir -p /var/www/mysite.com/html
-   ```
+## Obtain ssl certificate
+```bash
+sudo certbot --nginx -d mysite.com -d www.mysite.com
+```
 
-2. Change owenership to non root
-
-   ```bash
-   $ sudo chown -R $USER:$USER /var/www/mysite.com/html
-   ```
-
-3. Set the permisions for the directory
-
-   ```bash
-   $ sudo chmod -R 755 /var/www/mysite.com
-   ```
-
-4. Create a test page
-
-   ```bash
-   nano /var/www/mysite.com/html/index.html
-   ```
-
-   > Code
-   >
-   > ```markup
-   > <html>
-   >  <head>
-   >      <title>Welcome!!!!</title>
-   >  </head>
-   >  <body>
-   >      <h1>Wow the site works!</h1>
-   >  </body>
-   > </html>
-   > ```
-
-5. Create server conf
-
-   ```bash
-   $ sudo nano /etc/nginx/sites-available/mysite.com
-   ```
-
-   Add the following config
-
-   ```javascript
-   server {
-        listen 80;
-        listen [::]:80;
-
-        root /var/www/mysite.com/html;
-        index index.html index.htm index.nginx-debian.html;
-
-        server_name mysite.com www.mysite.com;
-
-        location / {
-                try_files $uri $uri/ =404;
-        }
-   }
-   ```
-
-6. Create a link to this file as nginx config file
-
-   ```bash
-   $ sudo ln -s /etc/nginx/sites-available/mysite.com /etc/nginx/sites-enabled/
-   ```
-
-7. To avoid hash bucket memory problem enable the setting to accomodate more than one names
-
-   ```bash
-   $ sudo nano /etc/nginx/nginx.conf
-   ```
-
-   And ucomment the line `server_names_hash_bucket_size 64;`
-
-8. Check changes before restarting the server
-
-   ```bash
-   $ sudo nginx -t
-   ```
-
-9. Restart nginx
-
-   ```bash
-   $ sudo systemctl restart nginx
-   ```
-
+## Verify auto renewal
+```bash
+sudo certbot renew --dry-run
+```
