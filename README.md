@@ -76,6 +76,7 @@ $ sudo usermod -a -G groupname username
 * __usermod__: modify a user account.
 * __chage__: change user password expiry information.
 * __sudo__: run one or more commands as another user (typically with superuser permissions).
+* __id__: to display the user details
 
 > Relevant files: /etc/passwd (user information), /etc/shadow (encrypted passwords), /etc/group (group information) and /etc/sudoers (configuration for sudo).
 
@@ -91,11 +92,42 @@ $ addgroup maint
 ```
 + Add new user to the group
 ```bash
-$ sudo usermod -a -G maint ashish
+$ sudo usermod -g maint ashish
 ```
 + Delete the group ashish
 ```bash
-groupdel ashish
+$ groupdel ashish
+```
++ Add user to sudoer list
+```bash
+# usermod -a -G sudo ashish
 ```
 
-
+## Installing NGINX on ubuntu
+1. Install Nginx
+```bash
+$ sudo apt install nginx
+```
+2. check firewall settings
+```bash
+$ sudo ufw app list
+```
+> Output
+```
+Available applications:
+  Nginx Full
+  Nginx HTTP
+  Nginx HTTPS
+  OpenSSH
+```
+3. Allow traffic 
+```bash
+$ sudo ufw allow 'Nginx HTTP'
+```
+4. Check server status
+```bash
+$ systemctl status nginx
+```
+5. Open browser and type the ip of the server to see something like below
+![nginx welcome page](assets/snapshots/nginx.png)
+ 
