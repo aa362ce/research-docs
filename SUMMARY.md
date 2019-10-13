@@ -1,6 +1,14 @@
 # Table of contents
 
 * [Ubuntu server for deployment](README.md)
-* [nginx setup](nginx-setup.md)
-* [Setting up Let's Encrypt](setting-up-lets-encrypt.md)
+
+## Setup Ubuntu for developement
+
+* [nginx setup](setup-ubuntu-for-developement/nginx-setup.md)
+* [Setting up Let's Encrypt](setup-ubuntu-for-developement/setting-up-lets-encrypt.md)
+
+## FeathersJS
+
+* [FeathersJS](feathersjs/feathersjs.md)
+* [Untitled](feathersjs/untitled.md)
 

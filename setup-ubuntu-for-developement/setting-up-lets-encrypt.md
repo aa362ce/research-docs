@@ -31,20 +31,20 @@ sudo ufw status
 ```
 
 > Output
-
+>
 > ```bash
 > Status: active
-
+>
 > To Action From
-
+>
 > OpenSSH ALLOW Anywhere 
 > Nginx Full ALLOW Anywhere 
 > OpenSSH (v6) ALLOW Anywhere (v6) 
 > Nginx Full (v6) ALLOW Anywhere (v6)
-> 
 > ```
 
 ## Obtain ssl certificate
+
 ```bash
 sudo certbot --nginx -d mysite.com -d www.mysite.com
 ```
