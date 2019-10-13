@@ -7,6 +7,7 @@ description: Research and links glossary
 > Ashish Bhatt \| Oct 8 2019
 
 ## Users
+
 Default contents of `/etc/passwd` file this contains all user informations this is colon separated first element is username second represents x which historically used to have password hash. Followed by user id, group id, description, home directory and at the end default shell.
 
 ```bash
@@ -20,16 +21,21 @@ sync:x:4:65534:sync:/bin:/bin/sync
 games:x:5:60:games:/usr/games:/usr/sbin/nologin
 man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
 ```
+
 Add a new user
+
 ```bash
 sudo adduser newUserNameHere
 ```
+
 or
+
 ```bash
 sudo useradd newUserNameHere
 ```
 
 ## Groups
+
 Listing all groups on a linux system
 
 ```bash
@@ -56,15 +62,19 @@ proxy:x:13:
 * **Group List**: It is a list of user names of users who are members of the group. The user names, must be separated by commas.
 
 Adding a new group
+
 ```bash
 sudo groupadd newGroupHere
 ```
+
 or to delete a group
 
 ```bash
 sudo groupdel groupToBeDeleted
 ```
+
 Added user to a group
+
 ```bash
 sudo usermod -a -G groupname username
 ```
@@ -86,23 +96,31 @@ sudo usermod -a -G groupname username
 
 1. Create a new user
 
-  ```bash
-  sudo adduser ashish
-  ```
+   ```bash
+   sudo adduser ashish
+   ```
+
 2. Create a new group
-  ```bash
-  sudo addgroup maint
-  ```
+
+   ```bash
+   sudo addgroup maint
+   ```
+
 3. Add new user to the group
-  ```bash
-  sudo usermod -g maint ashish
-  ```
+
+   ```bash
+   sudo usermod -g maint ashish
+   ```
+
 4. Delete the group ashish
-  ```bash
-  sudo groupdel ashish
-  ```
+
+   ```bash
+   sudo groupdel ashish
+   ```
+
 5. Add user to `sudoer` list
-  ```bash
-  sudo usermod -a -G sudo ashish
-  ```
+
+   ```bash
+   sudo usermod -a -G sudo ashish
+   ```
 
