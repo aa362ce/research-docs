@@ -39,8 +39,8 @@ sudo ufw status
 
 > OpenSSH ALLOW Anywhere 
 > Nginx Full ALLOW Anywhere 
-> OpenSSH \(v6\) ALLOW Anywhere \(v6\) 
-> Nginx Full \(v6\) ALLOW Anywhere \(v6\)
+> OpenSSH (v6) ALLOW Anywhere (v6) 
+> Nginx Full (v6) ALLOW Anywhere (v6)
 > 
 > ```
 
