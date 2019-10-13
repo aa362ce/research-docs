@@ -43,6 +43,22 @@ sudo ufw status
 > Nginx Full (v6) ALLOW Anywhere (v6)
 > ```
 
+Enable firewall by using following command
+
+```bash
+sudo ufw enable
+```
+
+Alternately same can be disabled using
+
+```bash
+sudo ufw disable
+```
+
+{% hint style="info" %}
+These commands also enable/disable the ufw on startup
+{% endhint %}
+
 ## Obtain ssl certificate
 
 ```bash

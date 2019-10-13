@@ -2,7 +2,7 @@
 description: Build app faster with feathersjs
 ---
 
-# FeathersJS
+# Setup instructions
 
 ## Before you begin
 
@@ -16,12 +16,22 @@ $ npm install @feathersjs/cli -g
  FeathersJS requires node version 10 or later at the time of writing this latest version for feathersJS is 4.1.0
 {% endhint %}
 
-Once you're strong enough, save the world:
+Generate the app using following commands
 
+```bash
+$ mkdir feathers-app
+$ cd feathers-app/
+$ feathers generate app
+$ npm run dev
 ```
-// Ain't no code for that yet, sorry
-echo 'You got to trust me on this, I saved the world'
-```
+
+{% hint style="info" %}
+This is interactive app generation and use the right options accordingly
+{% endhint %}
+
+
+
+
 
 
 

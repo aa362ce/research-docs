@@ -9,5 +9,5 @@
 
 ## FeathersJS
 
-* [FeathersJS](feathersjs/feathersjs.md)
+* [Setup instructions](feathersjs/feathersjs.md)
 
