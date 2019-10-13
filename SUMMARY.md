@@ -10,5 +10,4 @@
 ## FeathersJS
 
 * [FeathersJS](feathersjs/feathersjs.md)
-* [Untitled](feathersjs/untitled.md)
 
