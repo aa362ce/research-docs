@@ -16,5 +16,9 @@ syntax
 :syntax on
 ```
 
+vim open tow files side by side
 
+```bash
+vim -O file1 file2
+```
 
