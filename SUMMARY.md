@@ -11,3 +11,7 @@
 
 * [Setup instructions](feathersjs/feathersjs.md)
 
+## VIM
+
+* [Common vim commands](vim/untitled.md)
+
