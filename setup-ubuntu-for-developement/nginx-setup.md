@@ -101,7 +101,7 @@ description: nginx settings for Let's encrypt
         location / {
                      try_files $uri $uri/ =404;
         }
-        }
+   }
    ```
 
 6. Create a link to this file as nginx config file
