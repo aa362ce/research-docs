@@ -21,5 +21,5 @@
 
 ## Mac OS
 
-* [Untitled](mac-os/untitled.md)
+* [FAQ](mac-os/untitled.md)
 

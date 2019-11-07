@@ -1,4 +1,8 @@
-# Untitled
+---
+description: Quick configurations
+---
+
+# FAQ
 
 ## How to remove services not listed under launch items?
 
