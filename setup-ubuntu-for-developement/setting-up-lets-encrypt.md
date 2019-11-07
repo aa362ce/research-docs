@@ -33,14 +33,7 @@ sudo ufw status
 > Output
 >
 > ```bash
-> Status: active
->
-> To Action From
->
-> OpenSSH ALLOW Anywhere 
-> Nginx Full ALLOW Anywhere 
-> OpenSSH (v6) ALLOW Anywhere (v6) 
-> Nginx Full (v6) ALLOW Anywhere (v6)
+> Status: activeTo Action FromOpenSSH ALLOW Anywhere Nginx Full ALLOW Anywhere OpenSSH (v6) ALLOW Anywhere (v6) Nginx Full (v6) ALLOW Anywhere (v6)
 > ```
 
 Enable firewall by using following command

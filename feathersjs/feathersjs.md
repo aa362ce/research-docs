@@ -19,10 +19,7 @@ $ npm install @feathersjs/cli -g
 Generate the app using following commands
 
 ```bash
-$ mkdir feathers-app
-$ cd feathers-app/
-$ feathers generate app
-$ npm run dev
+$ mkdir feathers-app$ cd feathers-app/$ feathers generate app$ npm run dev
 ```
 
 {% hint style="info" %}

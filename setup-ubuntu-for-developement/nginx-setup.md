@@ -21,11 +21,7 @@ description: nginx settings for Let's encrypt
    > Output
    >
    > ```bash
-   > Available applications:
-   > Nginx Full
-   > Nginx HTTP
-   > Nginx HTTPS
-   > OpenSSH
+   > Available applications:Nginx FullNginx HTTPNginx HTTPSOpenSSH
    > ```
 
 3. Allow traffic
@@ -73,14 +69,7 @@ description: nginx settings for Let's encrypt
    > Code
    >
    > ```markup
-   > <html>
-   >  <head>
-   >      <title>Welcome!!!!</title>
-   >  </head>
-   >  <body>
-   >      <h1>Wow the site works!</h1>
-   >  </body>
-   > </html>
+   > <html> <head>     <title>Welcome!!!!</title> </head> <body>     <h1>Wow the site works!</h1> </body></html>
    > ```
 
 5. Create server conf
@@ -92,19 +81,7 @@ description: nginx settings for Let's encrypt
    Add the following config
 
    ```javascript
-   server {
-        listen 80;
-        listen [::]:80;
-
-        root /var/www/mysite.com/html;
-        index index.html index.htm index.nginx-debian.html;
-
-        server_name mysite.com www.mysite.com;
-
-        location / {
-                try_files $uri $uri/ =404;
-        }
-   }
+   server {     listen 80;     listen [::]:80;     root /var/www/mysite.com/html;     index index.html index.htm index.nginx-debian.html;     server_name mysite.com www.mysite.com;     location / {             try_files $uri $uri/ =404;     }}
    ```
 
 6. Create a link to this file as nginx config file
